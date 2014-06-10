@@ -52,8 +52,8 @@
     <!-- SLIDE: PART 1 INTRO -->
     <article class='slide slide-subhead'>
       <h1>JavaScript Part 1</h1>
-      <p>Getting started with an intro to functions,<br>
-      variables and operators</p>
+      <p>Getting started with variables, operators, and an intro to functions<br>
+      </p>
     </article>
 
     <!-- SLIDE: EXERCISE OVERVIEW -->
@@ -64,14 +64,302 @@
       </div>
     </article>
     
-    <!-- SLIDE: EXERCISE OVERVIEW -->
+   
+
+    <!-- SLIDE: COMMENTS -->
     <article class='slide slide-list'>
-      <h2>JavaScript Exercise Overview</h2>
-      <br />
-      <p>You'll want your site to be capable of offering online shopping and to collect customer information to print shipping labels.</p>
-      <p>You'll also want to make sure that everything works properly as well. That means customers can't submit empty forms and product totals are calculated properly in their shopping carts.</p>
-      <p>In order to create a website that can handle these requirements, we will need to learn how to use <span class="keyword">functions</span>, <span class="keyword">variables</span>, and <span class="keyword">conditionals</span>.</p>
+      <h2>Comments</h2>
+      <p>
+        Sometimes you want to write notes to yourself (and others) to organize blocks of code or leave explanations. Use comments! <strong>JavaScript will ignore comments and not execute them.</strong>
+      </p>
+<pre class='prettyprint'>
+// This is how you leave a single line comment.
+
+// You can write many single line comments.
+// Just make sure to add the double slash
+// for every new line.
+</pre>
+      <p>Here's another way to comment larger blocks of text.</p>
+<pre class='prettyprint'>
+/* This is how you leave
+multi-line comments for when you
+want to write a longer message */
+</pre>
+      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
     </article>
+    
+       <!-- SLIDE: COMMENTS -->
+    <article class='slide slide-list'>
+      <h2>Try it out</h2>
+      <br>
+      <p>
+      	Open up "LadiesLearningCode.html" in Sublime and try writing a comment. 
+      	<br>
+      	<br>
+      	Save your changes and load it in your browser by double clicking the file.
+      	<br>
+      	<br>
+      	To open your file in Sublime, right click on the file, "Open With...", then choose Sublime. 
+		</p>    
+    </article>
+   
+    <!-- SLIDE: VARIABLES -->
+    <article class='slide slide-list'>
+      <h2>Variables</h2>
+      <br />
+      <p><span class="keyword">Variables</span> are like containers or a box. They are used to <strong>store values</strong> so you can use them later on, when you need them.</p>
+      <p class="centered"><img src="assets/storage_boxes.png" /></p>
+    </article>
+
+    <!-- SLIDE: VARIABLES HOW-TO -->
+    <article class='slide slide-list'>
+      <h2>Variables How-to</h2>
+      <p><span class="keyword">Declare</span> variables with the keyword <strong><code>var</code></strong>.</p>
+      <pre class='prettyprint'>var name;</pre>
+      <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
+      <pre class='prettyprint'>name = "Shakiba";</pre>
+      <p>Now the computer will remember my name!</p>
+      <p>Variables are also like the computer's short-term memory. It doesn't remember anything unless instructed. </p>
+      <div class="reminders">
+        <p>Take note that the value of the variable is written between quotes.<br />
+        More on this soon.</p>
+      </div>
+    </article>
+
+  
+    <!-- SLIDE: VARIABLES (cont'd) shipping example -->
+    <article class='slide slide-list'>
+      <h2>Variables (cont'd)</h2>
+      <br />
+      <p>
+      	In a web checkout form that asks for your name and address, variables can be used to store this information.
+      	The stored information can then be used to create things like shipping labels.</p>
+      <br />
+      <p class="centered">
+        <img src="assets/var-shipping-example.jpg" width="594" height="193" />
+      </p>
+    </article>
+
+    
+    <!-- SLIDE: STATEMENTS -->
+    <article class='slide slide-list'>
+      <h2>Aside: Statements</h2>
+      
+      <p><span class="keyword">Statements</span> are commands that tell the computer what to do.
+      <br><br>
+        End a statement with a semicolon (<code>;</code>) to tell the computer that the statement is done.</p>
+      <p>Ending a statement with a semicolon is like ending a sentence with a period.</p>
+      
+      
+      
+      
+      <p>You can declare a variable with two statements:</p>
+		<pre class='prettyprint'>var name;
+name = "Shakiba";
+		</pre>
+		<p>or with one statement:</p>
+		<pre class='prettyprint'>var name = "Shakiba";</pre>
+    </article>
+
+
+    <!-- SLIDE: AN ASIDE -->
+    <article class='slide slide-list'>
+      <h2>Say My Name, Say My Name</h2>
+      <br />
+      <p>Let's try creating some variables.</p>
+      <p>Below is an example of a variable for your email address. Try creating another variable for your favorite color.  
+      <br> <br>Output the values using <code>document.write()</code>.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  var email = "shakiba@gmail.com";
+  document.write(email);
+
+  document.write("<br />"); //this is just a line break
+
+  // create a color variable here
+
+SCRIPTEND</textarea>
+<script type='coder-solution'>SCRIPT
+  
+  var email = "shakiba@gmail.com";
+  document.write(email);
+
+  document.write("<br />"); //this is just a line break
+
+  var color = "red";
+  document.write(color);
+
+SCRIPTEND</script>
+    </article>
+    
+    
+    <!-- SLIDE: VARIABLES (cont'd) shipping example -->
+    <article class='slide slide-list'>
+      <h2>Whoa, whoa, hang on a second!</h2>
+      <br />
+      <p>
+      	What is this <code>document.write()</code>, you ask??</p>
+      <p>It's a function in JavaScript to write 'something' to a document (i.e the web page)</p>
+      
+    </article>
+
+     <!-- SLIDE: VARIABLES - assignment operator -->
+    <article class='slide slide-list'>
+      <h2>Back to Assigning Variables</h2>
+      <br />
+      <p><span class="assignment">IMPORTANT!</span></p>
+      
+      <p>Using the equals (<code>=</code>) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
+      <p>
+        <code>var total = 1 + 1</code>
+        is not the same as
+        <code>1 + 1 = 2</code>
+      </p>
+      <p><code>var total = 1 + 1</code> means:<br />
+        <span class="keyword">evaluate</span> everything to the <em>right</em> of the equals sign (e.g. <code>1 + 1</code>), 
+        <br />then <span class="keyword">assign</span> this value (e.g. the number <code>2</code>) to the variable on the <em>left</em> side.
+      </p>
+      
+    </article>
+
+    <!-- SLIDE: VARIOUS VARIABLES  -->
+    <article class='slide slide-list'>
+      <h2>Various Variables</h2>
+      <p>Variables can hold different kinds of values. We've been using <span class="keyword">strings</span> so far but variables can also hold other kinds of values.</p>
+      <p>1. Numeric variable (integers &amp; decimals)</p>
+<pre class='prettyprint'>
+var someIntegerNumber = 10;
+var someDecimalNumber = 10.5;
+</pre>
+      <p>2. Boolean variable (true/false)</p>
+<pre class='prettyprint'>
+var isSaturday = true;
+var isSunday = false;
+</pre>
+      <p>3. String variable (letters, words &amp; sentences)</p>
+<pre class='prettyprint'>
+var singleWordString = "hello";
+var sentenceString = "Hello, good day to you!";
+var numberString = "10";
+</pre>      
+      <div class="reminders single-line">
+        <p>Only string values are written inside single or double quotes ('string' or "string").</p>
+      </div>
+      <br />
+    </article>
+
+    <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
+    <article class='slide slide-list'>
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>Variables <strong>can't contain spaces</strong>. Use a convention called <span class="keyword">camel case</span>.
+        <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
+      </p>
+      <p>JavaScript is <strong>case sensitive</strong> (uppercase and lowercase letters are treated differently) so variable names are also case sensitive.</p>
+      <p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // We might read this as "greet me" but
+  // small differences make a big difference to JavaScript
+  var greetme = "Hello, what's your name?";
+  var greetMe = "Bonjour, quel est ton nom?";
+  var greet_me = "Hola, ¿cómo te llamas?";
+
+  // Activity: test our different variables by outputting them to the page
+  document.write("greetme: " + greetme + "<br />");
+  document.write("greetMe: " + greetme + "<br />");
+  document.write("greet_me: " + greetme + "<br />");
+
+SCRIPTEND</textarea>
+    </article>
+
+    <!-- SLIDE: VARIABLES - DESCRIPTIVE NAMES -->
+    <article class='slide slide-list'>
+    <br />
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>
+        When naming a variable, it's best to give it a descriptive name.
+      </p>
+      <p>
+        It makes it easier to see, at a glance, what kind of value that variable is going to hold.
+      </p>
+      <p>
+        This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
+      </p>
+      <p>
+        <code>var <strong>firstName</strong>;</code> &larr; Clear that first name will go here.
+        <br />
+        <code>var <strong>fn</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not as obvious as firstName.
+        <br />
+        <code>var <strong>x</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not clear at all.
+      </p>
+    </article>
+
+    <!-- SLIDE:  VARIABLES - UNDERSCORES AND $ SIGNS -->
+    <article class='slide slide-list'>
+      <h2>Variables: Tips &amp; Best Practices</h2>
+      <p>
+        Variables cannot start with a number or any special characters <em>except</em> for underscores (<code>_</code>) and dollar signs (<code>$</code>).
+      </p>
+      <div class="reminders">
+        <p>Although it's valid to use underscore or a dollar sign, they should only be used in special circumstances.
+        </p>
+      </div>
+      <br />
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+  
+  // A variable starting with a number is not valid.
+  // A "silent" error will occur -- nothing happens when we press Run.
+  var 3hundred = 300;
+  document.write(3hundred);
+
+  // However, when we open up the Chrome console ,
+  // we can see the browser complain of a 
+  // "Uncaught SyntaxError: Unexpected token ILLEGAL"
+  // (from Chrome Menu: View -> Developer -> JavaScript Console)
+
+  // A variable can start with a $ or _
+  var $dalmations = 1001;
+  document.write($dalmations);
+
+SCRIPTEND</textarea>
+<script type='coder-solution'>SCRIPT
+
+  //var 3hundred = 300;
+  //cdocument.write(3hundred);
+
+  // A variable can start with a $ or _
+  var $dalmations = 1001;
+  document.write($dalmations);
+
+SCRIPTEND</script>
+    </article>
+
+    <!-- SLIDE:  WHITESPACE -->
+    <article class='slide slide-list'>
+      <h2>Whitespace in JavaScript</h2>
+      <p>
+        <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
+      JavaScript ignores whitespace except when used in a string.</p>
+<pre class="prettyprint">
+// both statements are the same to JavaScript
+var name=&quot;Brenna&quot;;
+var name = &quot;Brenna&quot;;
+</pre>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // A test to show whitespace in use 
+  alert("Whitespace in a string.");
+  alert("Whitespace     in    a    string.");
+
+  // Remember that browsers ignore extra whitespace in HTML!
+  // Use "Inspect Element" to verify that there is indeed whitespace
+  document.write("Whitespace in a string.");
+  document.write("Whitespace     in    a    string.");
+
+SCRIPTEND</textarea>
+    </article>
+
+ 
 
     <!-- SLIDE: INTRO TO FUNCTIONS -->
     <article class='slide slide-list'>
@@ -168,302 +456,24 @@ SCRIPTEND</textarea>
     </div>
     </article>
 
-    <!-- SLIDE: COMMENTS -->
+
+ <!-- SLIDE: ALERT -->
     <article class='slide slide-list'>
-      <h2>Comments</h2>
+      <h2>Alerting the User</h2>
       <p>
-        Sometimes you want to write notes to yourself (and others) to organize blocks of code or leave explanations. Use comments! <strong>JavaScript will ignore comments and not execute them.</strong>
+        If we just want to alert the user of something important, we can use the <code>alert()</code> functions
       </p>
-<pre class='prettyprint'>
-// This is how you leave a single line comment.
-
-// You can write many single line comments.
-// Just make sure to add the double slash
-// for every new line.
-</pre>
-      <p>Here's another way to comment larger blocks of text.</p>
-<pre class='prettyprint'>
-/* This is how you leave
-multi-line comments for when you
-want to write a longer message */
-</pre>
-      <p>Multi-line comments are great for "hiding" large blocks of code so you can try something new without erasing your old code.</p>    
-    </article>
-   
-    <!-- SLIDE: VARIABLES -->
-    <article class='slide slide-list'>
-      <h2>Variables</h2>
-      <br />
-      <p><span class="keyword">Variables</span> are like containers or a box. They are used to <strong>store values</strong> so you can use them later on, when you need them.</p>
-      <p class="centered"><img src="assets/storage_boxes.png" /></p>
-    </article>
-
-    <!-- SLIDE: VARIABLES HOW-TO -->
-    <article class='slide slide-list'>
-      <h2>Variables How-to</h2>
-      <p><span class="keyword">Declare</span> variables with the keyword <strong><code>var</code></strong>.</p>
-      <pre class='prettyprint'>var email;</pre>
-      <p><span class="keyword">Assign</span> a value to the variable using the equals (<code>=</code>) sign.</p>
-      <pre class='prettyprint'>email = "hi@brennaobrien.com";</pre>
-      <p>Now the computer will remember my email address!</p>
-      <div class="reminders">
-        <p>Take note that the value of the variable is written between quotes.<br />
-        More on this soon.</p>
-      </div>
-    </article>
-
-    <!-- SLIDE: VARIABLES (cont'd) -->
-    <article class='slide slide-list'>
-      <h2>Variables (cont'd)</h2>
-      <br />
-      <p>Variables are also like the computer's short-term memory. It doesn't remember anything unless instructed.  In this example, the computer can't remember anybody's name!</p>
-      <p><em>But it can remember it if we use a variable.</em></p>
+      <p>
+        This function triggers a popup box that displays text to the user. 
+      </p>
+      <p> Try it out yourself!</p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
-  // prompt() is a function for showing a popup
-  // with an input text field that you can type into
-  prompt("What's your name?");
-
-  // alert() is exactly like prompt()
-  // but doesn't have an input field
-  alert("Hello....?");
-
-  // document.write() also uses the text between the parenthese and quotes
-  // but outputs it directly on the webpage (instead of a popup)
-  document.write("Hello....?");
-
-SCRIPTEND</textarea>
-<script type='coder-solution'>SCRIPT
-
-  // create a VARIABLE called "name"
-  var name;
-
-  // take the text you wrote in the popup input field
-  // and save it to the "name" variable 
-  name = prompt("What's your name?");
-
-  // use the value of "name" and show it in the alert
-  alert(name);
-
-  // also output it directly on the webpage
-  document.write(name);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE: VARIABLES (cont'd) shipping example -->
-    <article class='slide slide-list'>
-      <h2>Variables (cont'd)</h2>
-      <br />
-      <p>
-      	In a web checkout form that asks for your name and address, variables can be used to store this information.
-      	The stored information can then be used to create things like shipping labels.</p>
-      <br />
-      <p class="centered">
-        <img src="assets/var-shipping-example.jpg" width="594" height="193" />
-      </p>
-    </article>
-
-    
-    <!-- SLIDE: STATEMENTS -->
-    <article class='slide slide-list'>
-      <h2>Aside: Statements</h2>
-      
-      <p><span class="keyword">Statements</span> are commands that tell the computer what to do.<br>
-        End a statement with a semicolon (<code>;</code>) to tell the computer that the statement is done.</p>
-      <p>Ending a statement with a semicolon is like ending a sentence with a period.</p>
-      <p>You can also declare a variable with one or two statements.</p>
-<pre class='prettyprint'>var email;
-email = "hi@brennaobrien.com";
-</pre>
-<p>is the same as</p>
-<pre class='prettyprint'>var email = "hi@brennaobrien.com";</pre>
-    </article>
-
-
-    <!-- SLIDE: AN ASIDE -->
-    <article class='slide slide-list'>
-      <h2>Say My Name, Say My Name</h2>
-      <br />
-      <p>Let's try creating some variables.</p>
-      <p>Below is an example of a variable for your name. Try creating another variable for your email address.  Output the values using <code>document.write()</code>.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  var name = "Brenna";
-  document.write(name);
-
-  document.write("<br />"); //just a line break
-
-  // create an email variable here
-
-SCRIPTEND</textarea>
-<script type='coder-solution'>SCRIPT
+alert("Welcome to Ladies Learning Code!");
   
-  var name = "Brenna";
-  document.write(name);
-
-  document.write("<br />"); //just a line break
-
-  var email = "hi@brennaobrien.com";
-  document.write(email);
-
-SCRIPTEND</script>
-    </article>
-
-     <!-- SLIDE: VARIABLES - assignment operator -->
-    <article class='slide slide-list'>
-      <h2>Assigning Variables</h2>
-      <br />
-      <p><span class="assignment">IMPORTANT!</span></p>
-      
-      <p>Using the equals (<code>=</code>) symbol in Javascript is <span class="highlight">NOT</span> the same as in math.</p>
-      <p>
-        <code>var total = 1 + 1</code>
-        is not the same as
-        <code>1 + 1 = 2</code>
-      </p>
-      <p><code>var total = 1 + 1</code> means:<br />
-        <span class="keyword">evaluate</span> everything to the <em>right</em> of the equals sign (e.g. <code>1 + 1</code>), 
-        <br />then <span class="keyword">assign</span> this value (e.g. the number <code>2</code>) to the variable on the <em>left</em> side.
-      </p>
-      <p>You will see later that we can re-assign new values to an existing variable.</p>
-    </article>
-
-    <!-- SLIDE: VARIOUS VARIABLES  -->
-    <article class='slide slide-list'>
-      <h2>Various Variables</h2>
-      <p>Variables can hold different kinds of values. We've been using <span class="keyword">strings</span> so far but variables can also hold other kinds of values.</p>
-      <p>1. Numeric variable (integers &amp; decimals)</p>
-<pre class='prettyprint'>
-var someIntegerNumber = 10;
-var someDecimalNumber = 10.5;
-</pre>
-      <p>2. Boolean variable (true/false)</p>
-<pre class='prettyprint'>
-var isSaturday = true;
-var isSunday = false;
-</pre>
-      <p>3. String variable (letters, words &amp; sentences)</p>
-<pre class='prettyprint'>
-var singleWordString = "hello";
-var sentenceString = "Hello, good day to you!";
-var numberString = "10";
-</pre>      
-      <div class="reminders single-line">
-        <p>Only string values are written inside single or double quotes ('string' or "string").</p>
-      </div>
-      <br />
-    </article>
-
-    <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
-    <article class='slide slide-list'>
-      <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>Variables <strong>can't contain spaces</strong>. Use a convention called <span class="keyword">camel case</span>.
-        <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
-      </p>
-      <p>JavaScript is <strong>case sensitive</strong> (uppercase and lowercase letters are treated differently) so variable names are also case sensitive.</p>
-      <p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // We might read this as "greet me" but
-  // small differences make a big difference to JavaScript
-  var greetme = "Hello, what's your name?";
-  var greetMe = "Bonjour, quel est ton nom?";
-  var greet_me = "Hola, ¿cómo te llamas?";
-
-  // test our different variables by outputting them to the page
-  document.write("greetme: " + greetme + "<br />");
-  document.write("greetMe: " + greetme + "<br />");
-  document.write("greet_me: " + greetme + "<br />");
-
 SCRIPTEND</textarea>
     </article>
 
-    <!-- SLIDE: VARIABLES - DESCRIPTIVE NAMES -->
-    <article class='slide slide-list'>
-    <br />
-      <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>
-        When naming a variable, it's best to give it a descriptive name.
-      </p>
-      <p>
-        It makes it easier to see, at a glance, what kind of value that variable is going to hold.
-      </p>
-      <p>
-        This is especially useful when sharing code with others who may not use the same kinds of abbreviations.
-      </p>
-      <p>
-        <code>var <strong>firstName</strong>;</code> &larr; Clear that first name will go here.
-        <br />
-        <code>var <strong>fn</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not as obvious as firstName.
-        <br />
-        <code>var <strong>x</strong>; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> &larr; Not clear at all.
-      </p>
-    </article>
-
-    <!-- SLIDE:  VARIABLES - UNDERSCORES AND $ SIGNS -->
-    <article class='slide slide-list'>
-      <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>
-        Variables cannot start with a number or any special characters <em>except</em> for underscores (<code>_</code>) and dollar signs (<code>$</code>).
-      </p>
-      <div class="reminders">
-        <p>Although it's valid to use underscore or a dollar sign, they should only be used in special circumstances.
-        </p>
-      </div>
-      <br />
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-  
-  // A variable starting with a number is not valid.
-  // A "silent" error will occur -- nothing happens when we press Run.
-  var 3hundred = 300;
-  document.write(3hundred);
-
-  // However, when we open up the Chrome console (Alt+Cmd/Ctrl+J),
-  // we can see the browser complain of a 
-  // "Uncaught SyntaxError: Unexpected token ILLEGAL"
-
-  // A variable can start with a $ or _
-  var $dalmations = 1001;
-  document.write($dalmations);
-
-SCRIPTEND</textarea>
-<script type='coder-solution'>SCRIPT
-
-  //var 3hundred = 300;
-  //cdocument.write(3hundred);
-
-  // A variable can start with a $ or _
-  var $dalmations = 1001;
-  document.write($dalmations);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE:  WHITESPACE -->
-    <article class='slide slide-list'>
-      <h2>Whitespace in JavaScript</h2>
-      <p>
-        <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
-      JavaScript ignores whitespace except when used in a string.</p>
-<pre class="prettyprint">
-// both statements are the same to JavaScript
-var name=&quot;Brenna&quot;;
-var name = &quot;Brenna&quot;;
-</pre>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // A test to show whitespace in use 
-  alert("Whitespace in a string.");
-  alert("Whitespace     in    a    string.");
-
-  // Remember that browsers ignore extra whitespace in HTML!
-  // Use "Inspect Element" to verify that there is indeed whitespace
-  document.write("Whitespace in a string.");
-  document.write("Whitespace     in    a    string.");
-
-SCRIPTEND</textarea>
-    </article>
 
     <!-- SLIDE: GETTING USER INPUT -->
     <article class='slide slide-list'>
@@ -472,13 +482,14 @@ SCRIPTEND</textarea>
         So far we've been assigning the values to our variables. But what if we don't know what that value is going to be?
       </p>
       <p>
-        Remember <code>prompt()</code>? This function triggers a popup box that allows user input.  We can assign the prompt to a variable, thus saving the value of the user input.
+        The <code>prompt()</code> function triggers a popup box that allows user input.  We can assign the prompt to a variable, thus saving the value of the user input.
       </p>
+      <p>Try it out:</p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
-prompt("What day is it today?");
 
-//var todaysDate = prompt("What day is it today?");
-//document.write(todaysDate);
+var todaysDate;
+todaysDate = prompt("What day is it today?");
+document.write(todaysDate);
   
 SCRIPTEND</textarea>
     </article>
@@ -549,8 +560,8 @@ SCRIPTEND</textarea>
       <p>Instead of using just numbers, JavaScript can do math using variables with numerical values.</p>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
-  var tshirtPrice = 25;
-  var androidPrice = 10;
+  var jellybeans = 25;
+  var gummybears = 10;
 
   //var totalPrice;
   //document.write(totalPrice);
@@ -558,10 +569,10 @@ SCRIPTEND</textarea>
 SCRIPTEND</textarea>
 <script type="coder-solution">SCRIPT
 
-  var tshirtPrice = 25;
-  var androidPrice = 10; 
+  var jellybeans = 25;
+  var gummybears = 10; 
 
-  var totalPrice = tshirtPrice + androidPrice;
+  var totalPrice = jellybeans + gummybears;
   document.write(totalPrice);
 
 SCRIPTEND</script>
@@ -573,7 +584,7 @@ SCRIPTEND</script>
         Totals and Discounts</h2>
       <p style="margin-bottom:0;">Let's pretend that someone has checked out of our online store intending to buy 1 t-shirt and 1 Android plushie. Apply some arithmetic operations to get the final total after applying a discount.</p>
       <div class="hint">
-        <p>1. Calculate the sub-total given <code>tshirtPrice</code> and <code>androidPrice</code>.
+        <p>1. Calculate the sub-total given <code>jellybeans</code> and <code>gummybears</code>.
           <br />
           2. Calcuate the discount amount given the sub-total and <code>discountPercentage</code>.
           <br />
@@ -587,11 +598,11 @@ SCRIPTEND</script>
 <textarea class='coder-editor coder-editor-full' data-save='exercise-totals-and-discounts'>
 <script>
 
-  var tshirtPrice = 25;
-  var androidPrice = 10;
+  var jellybeans = 25;
+  var gummybears = 10;
   var discountPercentage = 15;
 
-  /* 1. What is the cost of one t-shirt and one android? */
+  /* 1. What is the cost of one jellybean and one gummybear? */
   var subTotal;
   //subTotal = **********
   document.write("Sub-Total: " + subTotal);
@@ -666,9 +677,9 @@ SCRIPTEND</script>
 <textarea class='coder-editor coder-editor-full'>
 <script>
   //Addition with the + operator
-  var tshirtPrice = 25;
-  var androidPrice = 10;
-  var shoppingTotal = tshirtPrice + androidPrice;
+  var jellybeans = 25;
+  var gummybears = 10;
+  var shoppingTotal = jellybeans + gummybears;
   document.write(shoppingTotal);
   document.write("<br />");
 
