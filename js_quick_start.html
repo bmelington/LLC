@@ -339,17 +339,13 @@ SCRIPTEND</script>
       <h2>Whitespace in JavaScript</h2>
       <p>
         <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
-      JavaScript ignores whitespace except when used in a string.</p>
+      JavaScript ignores whitespace</p>
 <pre class="prettyprint">
 // both statements are the same to JavaScript
 var name=&quot;Brenna&quot;;
 var name = &quot;Brenna&quot;;
 </pre>
 <textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // A test to show whitespace in use 
-  alert("Whitespace in a string.");
-  alert("Whitespace     in    a    string.");
 
   // Remember that browsers ignore extra whitespace in HTML!
   // Use "Inspect Element" to verify that there is indeed whitespace
@@ -359,7 +355,230 @@ var name = &quot;Brenna&quot;;
 SCRIPTEND</textarea>
     </article>
 
- 
+    
+
+
+    <!-- SLIDE: OPERATORS -->
+    <article class='slide slide-list'>
+      <h2>JavaScript Arithmetic Operators</h2>
+      <p>We can also use JavaScript to do math using arithmetic <span class="keyword">operators</span>.</p>
+      <p>Arithmetic operators in JavaScript are (<code>+</code>) for addition, (<code>-</code>) for subtraction, (<code>*</code>) for multiplication and (<code>/</code>) for division.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  document.write("Addition: ");
+  document.write(20 + 20);
+
+  document.write("<br />Subtraction: ");
+  document.write(20 - 20);
+
+  document.write("<br />Multiplication: ");
+  document.write(20 * 20);
+
+  document.write("<br />Division: ");
+  document.write(20 / 20);
+
+SCRIPTEND</textarea>
+    </article>
+
+    <!-- SLIDE: OPERATORS & VARIABLES -->
+    <article class='slide slide-list'>
+      <h2>Arithmetic Operators and Variables</h2>
+      <p>Getting JavaScript to do math can be very useful.<br />
+      For example, we can use it to calculate totals in a shopping cart form.</p>
+      <p>Instead of using just numbers, JavaScript can do math using variables with numerical values.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  var jellybeans = 25;
+  var gummybears = 10;
+
+  //var totalPrice;
+  //document.write(totalPrice);
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+  var jellybeans = 25;
+  var gummybears = 10; 
+
+  var totalPrice = jellybeans + gummybears;
+  document.write(totalPrice);
+
+SCRIPTEND</script>
+    </article>
+
+    <!-- SLIDE:  ADD SHOPPING CART ITEMS -->
+    <article class='slide slide-list'>
+      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
+        Totals and Discounts</h2>
+      <p style="margin-bottom:0;">Let's pretend that someone has checked out of our online store intending to buy 1 jellybean and 1 gummybear. <br>Apply some arithmetic operations to get the final total after applying a discount.</p>
+      <div class="hint">
+        <p>1. Calculate the sub-total given <code>jellybeans</code> and <code>gummybears</code>.
+          <br />
+          2. Calcuate the discount amount given the sub-total and <code>discountPercentage</code>.
+          <br />
+          3. Calcuate the final total given the sub-total and discount amount.
+        </p>
+      </div>
+      <div class="reminders single-line">
+        <p>addition (+), subtraction (-), multiplication (*), division (/)</p>
+      </div>
+      <br />
+<textarea class='coder-editor coder-editor-full' data-save='exercise-totals-and-discounts'>
+<script>
+
+  var jellybeanPrice = 25;
+  var gummybearPrice = 10;
+  var discountPercentage = 15;
+
+  /* 1. What is the cost of one jellybean and one gummybear? */
+  var subTotal;
+  //subTotal = **********
+  document.write("Sub-Total: " + subTotal);
+  document.write("<br />");
+
+  /* Guess what? Ladies Learning Code students get a percentage discount!
+     2. Figure out how much the discount will be. */
+  var discountAmount;
+  //discountAmount = **********
+  document.write("Discount Amount: " + discountAmount);
+  document.write("<br />");
+  
+  /* 3. Apply the discount to get the final price. */
+  var finalTotal;
+  //finalTotal = **********
+  document.write("Final Total: " + finalTotal);
+
+</script>
+</textarea>
+      <p class="solution-link">If you get stuck, <a href="exercises/solutions/totals-and-discounts.txt" target="_blank">click here</a> for the full solution.<br />Or if you want to reset, <a href="exercises/solutions/totals-and-discounts-org.txt" target="_blank">click here</a> for the original code.</p> 
+    </article>
+
+
+    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
+    <article class='slide slide-list'>
+      <h2><span style="font-size: 0.8em;">Operators: </span>Numbers vs. Strings</h2>
+      <p>Remember that there are different variable types?  Arithmetic operators can only be performed on numerical values.</p>
+      <p>But numbers can be disguised as strings too!</p>
+      <p>When the addition (<code>+</code>) operator is used with string values, it doesn't "add" the values, it <span class="keyword">concatenates</span> them.</p>
+      <p>Try it out yourself!</p>
+<textarea class='coder-editor'>SCRIPT
+
+  var num1 = 20;
+  var num2 = 10;
+
+  document.write(num1 + num2);
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+  var num1 = "20";
+  var num2 = 10;
+
+  document.write(num1 + num2);
+
+SCRIPTEND</script>
+    </article>
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation</h2>
+      <p>Unlike the other arithmetic operators, the (<code>+</code>) symbol has another purpose other than adding numbers. It is used to join strings together, also known as <span class="keyword">concatenation</span>.</p>
+      <p>You can concatenate variables, strings or a combination of both.</p>  
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  document.write("Hello " + "Brenna." + "<br />");
+
+  var greeting = "Hello";
+  var name = " Your name.";
+  document.write(greeting + name);
+
+  document.write("<br />" + greeting + " ladies learning Javascript.");
+
+</script>
+</textarea>
+    </article>
+
+
+    <!-- SLIDE: CONCATENATION -->
+    <article class='slide slide-list'>
+      <h2>Concatenation and Strings</h2>
+      <p>If you use the (<code>+</code>) operator with <strong>only</strong> numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
+      <p>Try this out in your editor.</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  //Addition with the + operator
+  var jellybeans = 25;
+  var gummybears = 10;
+  var shoppingTotal = jellybeans + gummybears;
+  document.write(shoppingTotal);
+  document.write("<br />");
+
+  //Concatenation with the + operator
+  //document.write("Your total is: " + "$" + shoppingTotal);
+  //document.write("<br />");
+
+  //no nos
+  //document.write("Your total is:" * shoppingTotal);
+  //document.write("<br />");
+  //document.write("$" + 20 + 1);
+</script>
+</textarea>
+    </article>
+
+
+    <!-- SLIDE: CONCATENATION PRACTICE -->
+    <article class='slide slide-list'>
+      <h2>Concatenation Practice</h2>
+      <p>Let's practice concatenating using variables and strings.</p>
+      <p>Paste this in your editor and finish it</p>
+<textarea class='coder-editor coder-editor-full'>
+<script>
+  var faveFood = prompt("What is your favorite food?");
+  
+  // using the variable "faveFood", update the "sentence"
+  // variable to say "My favorite food is ********."
+
+  // var sentence = 
+  document.write(sentence);
+</script>
+</textarea>
+<script type="coder-solution">SCRIPT
+
+  var faveFood = prompt("What is your favorite food?");
+  
+  // using the variable, "faveFood", update the "sentence"
+  // variable to say "My favorite food is ********."
+
+  var sentence = ("My favorite food is " + faveFood + ".");
+  document.write(sentence);
+
+SCRIPTEND</script>
+    </article>
+
+    <!-- SLIDE: INCREMENT AND DECREMENT -->
+    <article class='slide slide-list'>
+      <h2>Re-assigning Variables</h2>
+      <p>Even after a variable has been assigned a value, we can still override it and
+      <strong>re-assign</strong> a new value.</p>
+      <p>For example, we may want to increase or decrease values.</p>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // Declare and initialize the variable with a default value
+  var numberOfCookies = 0;
+  document.write("I started off with " + numberOfCookies + " cookies.<br />");
+  
+  // Add 1 to the current value of the variable, 
+  // then re-assign the new value to the same variable
+  numberOfCookies = numberOfCookies + 1;
+  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookie.<br />");
+  
+  // Subtract 1 from the current value of the variable, 
+  // then (once again) re-assign the new value to the same variable
+  numberOfCookies = numberOfCookies - 1;
+  document.write("I just ate a cookie. Now I have " + numberOfCookies + " left."); 
+
+SCRIPTEND</textarea>
+    </article>
 
     <!-- SLIDE: INTRO TO FUNCTIONS -->
     <article class='slide slide-list'>
@@ -495,7 +714,7 @@ SCRIPTEND</textarea>
     </article>
 
 
-    <!-- SLIDE: MINI-EXERCISE #1 -->
+ <!-- SLIDE: MINI-EXERCISE #1 -->
     <article class='slide slide-list'>
       <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
         Simple Shipping Label</h2>
@@ -529,225 +748,6 @@ SCRIPTEND</textarea>
       <p class="solution-link">If you get stuck, <a href="exercises/solutions/simple-shipping-label.txt" target="_blank">click here</a> for the full solution.<br />Or if you want to reset, <a href="exercises/solutions/simple-shipping-label-org.txt" target="_blank">click here</a> for the original code.</p>
     </article>
 
-
-    <!-- SLIDE: OPERATORS -->
-    <article class='slide slide-list'>
-      <h2>JavaScript Arithmetic Operators</h2>
-      <p>We can also use JavaScript to do math using arithmetic <span class="keyword">operators</span>.</p>
-      <p>Arithmetic operators in JavaScript are (<code>+</code>) for addition, (<code>-</code>) for subtraction, (<code>*</code>) for multiplication and (<code>/</code>) for division.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  document.write("Addition: ");
-  document.write(20 + 20);
-
-  document.write("<br />Subtraction: ");
-  document.write(20 - 20);
-
-  document.write("<br />Multiplication: ");
-  document.write(20 * 20);
-
-  document.write("<br />Division: ");
-  document.write(20 / 20);
-
-SCRIPTEND</textarea>
-    </article>
-
-    <!-- SLIDE: OPERATORS & VARIABLES -->
-    <article class='slide slide-list'>
-      <h2>Arithmetic Operators and Variables</h2>
-      <p>Getting JavaScript to do math can be very useful.<br />
-      For example, we can use it to calculate totals in a shopping cart form.</p>
-      <p>Instead of using just numbers, JavaScript can do math using variables with numerical values.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  var jellybeans = 25;
-  var gummybears = 10;
-
-  //var totalPrice;
-  //document.write(totalPrice);
-
-SCRIPTEND</textarea>
-<script type="coder-solution">SCRIPT
-
-  var jellybeans = 25;
-  var gummybears = 10; 
-
-  var totalPrice = jellybeans + gummybears;
-  document.write(totalPrice);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE:  ADD SHOPPING CART ITEMS -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (5-10 minutes):</div>
-        Totals and Discounts</h2>
-      <p style="margin-bottom:0;">Let's pretend that someone has checked out of our online store intending to buy 1 t-shirt and 1 Android plushie. Apply some arithmetic operations to get the final total after applying a discount.</p>
-      <div class="hint">
-        <p>1. Calculate the sub-total given <code>jellybeans</code> and <code>gummybears</code>.
-          <br />
-          2. Calcuate the discount amount given the sub-total and <code>discountPercentage</code>.
-          <br />
-          3. Calcuate the final total given the sub-total and discount amount.
-        </p>
-      </div>
-      <div class="reminders single-line">
-        <p>addition (+), subtraction (-), multiplication (*), division (/)</p>
-      </div>
-      <br />
-<textarea class='coder-editor coder-editor-full' data-save='exercise-totals-and-discounts'>
-<script>
-
-  var jellybeans = 25;
-  var gummybears = 10;
-  var discountPercentage = 15;
-
-  /* 1. What is the cost of one jellybean and one gummybear? */
-  var subTotal;
-  //subTotal = **********
-  document.write("Sub-Total: " + subTotal);
-  document.write("<br />");
-
-  /* Guess what? Ladies Learning Code students get a percentage discount!
-     2. Figure out how much the discount will be. */
-  var discountAmount;
-  //discountAmount = **********
-  document.write("Discount Amount: " + discountAmount);
-  document.write("<br />");
-  
-  /* 3. Apply the discount to get the final price. */
-  var finalTotal;
-  //finalTotal = **********
-  document.write("Final Total: " + finalTotal);
-
-</script>
-</textarea>
-      <p class="solution-link">If you get stuck, <a href="exercises/solutions/totals-and-discounts.txt" target="_blank">click here</a> for the full solution.<br />Or if you want to reset, <a href="exercises/solutions/totals-and-discounts-org.txt" target="_blank">click here</a> for the original code.</p> 
-    </article>
-
-
-    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
-    <article class='slide slide-list'>
-      <h2><span style="font-size: 0.8em;">Operators: </span>Numbers vs. Strings</h2>
-      <p>Remember that there are different variable types?  Arithmetic operators can only be performed on numerical values.</p>
-      <p>But numbers can be disguised as strings too!</p>
-      <p>When the addition (<code>+</code>) operator is used with string values, it doesn't "add" the values, it <span class="keyword">concatenates</span> them.</p>
-<textarea class='coder-editor'>SCRIPT
-
-  var num1 = 20;
-  var num2 = 10;
-
-  document.write(num1 + num2);
-
-SCRIPTEND</textarea>
-<script type="coder-solution">SCRIPT
-
-  var num1 = "20";
-  var num2 = 10;
-
-  document.write(num1 + num2);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE: CONCATENATION -->
-    <article class='slide slide-list'>
-      <h2>Concatenation</h2>
-      <p>Unlike the other arithmetic operators, the (<code>+</code>) symbol has another purpose other than adding numbers. It is used to join strings together, also known as <span class="keyword">concatenation</span>.</p>
-      <p>You can concatenate variables, strings or a combination of both.</p>  
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  document.write("Hello " + "Brenna." + "<br />");
-
-  var greeting = "Hello";
-  var name = " Your name.";
-  document.write(greeting + name);
-
-  document.write("<br />" + greeting + " ladies learning Javascript.");
-
-</script>
-</textarea>
-    </article>
-
-
-    <!-- SLIDE: CONCATENATION -->
-    <article class='slide slide-list'>
-      <h2>Concatenation and Strings</h2>
-      <p>If you use the (<code>+</code>) operator with <strong>only</strong> numerical values, it will add the values.  Otherwise, it will combine the outputs as a string.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  //Addition with the + operator
-  var jellybeans = 25;
-  var gummybears = 10;
-  var shoppingTotal = jellybeans + gummybears;
-  document.write(shoppingTotal);
-  document.write("<br />");
-
-  //Concatenation with the + operator
-  //document.write("Your total is: " + "$" + shoppingTotal);
-  //document.write("<br />");
-
-  //no nos
-  //document.write("Your total is:" * shoppingTotal);
-  //document.write("<br />");
-  //document.write("$" + 20 + 1);
-</script>
-</textarea>
-    </article>
-
-
-    <!-- SLIDE: CONCATENATION PRACTICE -->
-    <article class='slide slide-list'>
-      <h2>Concatenation Practice</h2>
-      <p>Let's practice concatenating using variables and strings.</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var faveFood = prompt("What is your favorite food?");
-  
-  // using the variable "faveFood", update the "sentence"
-  // variable to say "My favorite food is ********."
-
-  // var sentence = 
-  document.write(sentence);
-</script>
-</textarea>
-<script type="coder-solution">SCRIPT
-
-  var faveFood = prompt("What is your favorite food?");
-  
-  // using the variable, "faveFood", update the "sentence"
-  // variable to say "My favorite food is ********."
-
-  var sentence = ("My favorite food is " + faveFood + ".");
-  document.write(sentence);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE: INCREMENT AND DECREMENT -->
-    <article class='slide slide-list'>
-      <h2>Re-assigning Variables</h2>
-      <p>Even after a variable has been assigned a value, we can still override it and
-      <strong>re-assign</strong> a new value.</p>
-      <p>For example, we may want to increase or decrease values.</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // Declare and initialize the variable with a default value
-  var numberOfCookies = 0;
-  document.write("I started off with " + numberOfCookies + " cookies.<br />");
-  
-  // Add 1 to the current value of the variable, 
-  // then re-assign the new value to the same variable
-  numberOfCookies = numberOfCookies + 1;
-  document.write("I baked a cookie. Now I have " + numberOfCookies + " cookie.<br />");
-  
-  // Subtract 1 from the current value of the variable, 
-  // then (once again) re-assign the new value to the same variable
-  numberOfCookies = numberOfCookies - 1;
-  document.write("I just ate a cookie. Now I have " + numberOfCookies + " left."); 
-
-SCRIPTEND</textarea>
-    </article>
 
 
     <!-- SLIDE: Next section -->
