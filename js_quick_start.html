@@ -58,14 +58,60 @@
 
     <!-- SLIDE: EXERCISE OVERVIEW -->
     <article class='slide slide-list'>
-      <p>As the owner of the thriving store, <span style="color:#B1009A;font-weight:bold;">Planet Robots</span>, you have to make sure you have a top notch website.</p>
-      <div class="centered">
-      	<img src="assets/planet-robots.jpg" alt="planet-robots" />
-      </div>
+      <p>Put end picture of project here. We will make this!</p>
+
+    </article>
+    
+    <article class='slide slide-list'>
+      <h2>Opening up a web file</h2>
+      <br>
+      <p>
+      	Step 1: Open up "LadiesLearningCode.html" in Sublime . 
+      	<br>
+      	(To open your file in Sublime, right click on the file, "Open With...", then choose Sublime. )
+		</p>    
+		
+		<p>
+      	Step 2: Double click on "LadiesLearningCode.html" to load it in your browser . 
+      	
+		</p>   
     </article>
     
    
+ <!-- SLIDE: ALERT -->
+    <article class='slide slide-list'>
+      <h2>Our first JavaScript code</h2>
+      <p>
+        Let's have the computer greet us!
+      </p>
+      <p>
+        Write the following code in your editor, and load it in your browser.
+      </p>
 
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+alert("Welcome to Ladies Learning Code!");
+  
+SCRIPTEND</textarea>
+    </article>
+    
+    
+     <!-- SLIDE: ALERT -->
+    <article class='slide slide-list'>
+      <h2>Our first JavaScript code</h2>
+      <p>
+        Let's put some backslashes in front of our code and see what happens...
+      </p>
+
+
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+//alert("Welcome to Ladies Learning Code!");
+  
+SCRIPTEND</textarea>
+    </article>
+    
+    
     <!-- SLIDE: COMMENTS -->
     <article class='slide slide-list'>
       <h2>Comments</h2>
@@ -89,19 +135,7 @@ want to write a longer message */
     </article>
     
        <!-- SLIDE: COMMENTS -->
-    <article class='slide slide-list'>
-      <h2>Try it out</h2>
-      <br>
-      <p>
-      	Open up "LadiesLearningCode.html" in Sublime and try writing a comment. 
-      	<br>
-      	<br>
-      	Save your changes and load it in your browser by double clicking the file.
-      	<br>
-      	<br>
-      	To open your file in Sublime, right click on the file, "Open With...", then choose Sublime. 
-		</p>    
-    </article>
+    
    
     <!-- SLIDE: VARIABLES -->
     <article class='slide slide-list'>
@@ -231,12 +265,8 @@ SCRIPTEND</script>
 var someIntegerNumber = 10;
 var someDecimalNumber = 10.5;
 </pre>
-      <p>2. Boolean variable (true/false)</p>
-<pre class='prettyprint'>
-var isSaturday = true;
-var isSunday = false;
-</pre>
-      <p>3. String variable (letters, words &amp; sentences)</p>
+      
+      <p>2. String variable (letters, words &amp; sentences)</p>
 <pre class='prettyprint'>
 var singleWordString = "hello";
 var sentenceString = "Hello, good day to you!";
@@ -247,15 +277,33 @@ var numberString = "10";
       </div>
       <br />
     </article>
+    
+    <!-- SLIDE: VARIOUS VARIABLES  -->
+    <article class='slide slide-list'>
+      <h2>Various Variables</h2>
+      <p>Let's create two variables. One that contains a string, the other contains a number.</p>
+
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+ var myString = ******;
+ 
+ var myNumber = ******;
+ 
+//use alerts to display your variable contents
+
+SCRIPTEND</textarea>
+
+
+    </article>
+
 
     <!-- SLIDE: VARIABLE NAMES - NO SPACES -->
     <article class='slide slide-list'>
       <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>Variables <strong>can't contain spaces</strong>. Use a convention called <span class="keyword">camel case</span>.
-        <br />Every new word is capitalized and the result looks <strong>likeCamelHumps</strong>.
+      <p>Variable names <strong>can't contain spaces</strong>. 
       </p>
       <p>JavaScript is <strong>case sensitive</strong> (uppercase and lowercase letters are treated differently) so variable names are also case sensitive.</p>
-      <p>Another convention is to use underscores <strong>to_separate_words</strong>. This is common in other programming languages (like PHP).</p>
+     
 <textarea class='coder-editor coder-editor-full'>SCRIPT
 
   // We might read this as "greet me" but
@@ -265,9 +313,9 @@ var numberString = "10";
   var greet_me = "Hola, ¿cómo te llamas?";
 
   // Activity: test our different variables by outputting them to the page
-  document.write("greetme: " + greetme + "<br />");
-  document.write("greetMe: " + greetme + "<br />");
-  document.write("greet_me: " + greetme + "<br />");
+  document.write(greetme);
+  document.write(greetme);
+  document.write(greetme);
 
 SCRIPTEND</textarea>
     </article>
@@ -294,67 +342,9 @@ SCRIPTEND</textarea>
       </p>
     </article>
 
-    <!-- SLIDE:  VARIABLES - UNDERSCORES AND $ SIGNS -->
-    <article class='slide slide-list'>
-      <h2>Variables: Tips &amp; Best Practices</h2>
-      <p>
-        Variables cannot start with a number or any special characters <em>except</em> for underscores (<code>_</code>) and dollar signs (<code>$</code>).
-      </p>
-      <div class="reminders">
-        <p>Although it's valid to use underscore or a dollar sign, they should only be used in special circumstances.
-        </p>
-      </div>
-      <br />
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-  
-  // A variable starting with a number is not valid.
-  // A "silent" error will occur -- nothing happens when we press Run.
-  var 3hundred = 300;
-  document.write(3hundred);
+   
 
-  // However, when we open up the Chrome console ,
-  // we can see the browser complain of a 
-  // "Uncaught SyntaxError: Unexpected token ILLEGAL"
-  // (from Chrome Menu: View -> Developer -> JavaScript Console)
-
-  // A variable can start with a $ or _
-  var $dalmations = 1001;
-  document.write($dalmations);
-
-SCRIPTEND</textarea>
-<script type='coder-solution'>SCRIPT
-
-  //var 3hundred = 300;
-  //cdocument.write(3hundred);
-
-  // A variable can start with a $ or _
-  var $dalmations = 1001;
-  document.write($dalmations);
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE:  WHITESPACE -->
-    <article class='slide slide-list'>
-      <h2>Whitespace in JavaScript</h2>
-      <p>
-        <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
-      JavaScript ignores whitespace</p>
-<pre class="prettyprint">
-// both statements are the same to JavaScript
-var name=&quot;Brenna&quot;;
-var name = &quot;Brenna&quot;;
-</pre>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
-
-  // Remember that browsers ignore extra whitespace in HTML!
-  // Use "Inspect Element" to verify that there is indeed whitespace
-  document.write("Whitespace in a string.");
-  document.write("Whitespace     in    a    string.");
-
-SCRIPTEND</textarea>
-    </article>
-
+   
      <!-- SLIDE: CONCATENATION -->
     <article class='slide slide-list'>
       <h2>Concatenation</h2>
@@ -372,6 +362,8 @@ SCRIPTEND</textarea>
 
 </script>
 </textarea>
+<br/>
+<p>Note: <code> &#60;br&#47;&#62; </code>will break the line.  </p>
     </article>
 
 
@@ -402,34 +394,7 @@ SCRIPTEND</textarea>
     </article>
 
 
-    <!-- SLIDE: CONCATENATION PRACTICE -->
-    <article class='slide slide-list'>
-      <h2>Concatenation Practice</h2>
-      <p>Let's practice concatenating using variables and strings.</p>
-      <p>Paste this in your editor and finish it</p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-  var faveFood = prompt("What is your favorite food?");
-  
-  // using the variable "faveFood", update the "sentence"
-  // variable to say "My favorite food is ********."
-
-  // var sentence = 
-  document.write(sentence);
-</script>
-</textarea>
-<script type="coder-solution">SCRIPT
-
-  var faveFood = prompt("What is your favorite food?");
-  
-  // using the variable, "faveFood", update the "sentence"
-  // variable to say "My favorite food is ********."
-
-  var sentence = ("My favorite food is " + faveFood + ".");
-  document.write(sentence);
-
-SCRIPTEND</script>
-    </article>
+    
 
 
     <!-- SLIDE: OPERATORS -->
@@ -502,7 +467,7 @@ SCRIPTEND</script>
 
   var jellybeanPrice = 25;
   var gummybearPrice = 10;
-  var discountPercentage = 15;
+  var discountDollars = 5;
 
   /* 1. What is the cost of one jellybean and one gummybear? */
   var subTotal;
@@ -512,9 +477,7 @@ SCRIPTEND</script>
 
   /* Guess what? Ladies Learning Code students get a percentage discount!
      2. Figure out how much the discount will be. */
-  var discountAmount;
-  //discountAmount = **********
-  document.write("Discount Amount: " + discountAmount);
+  document.write("Discount Dollars: " + discountDollars);
   document.write("<br />");
   
   /* 3. Apply the discount to get the final price. */
@@ -528,30 +491,7 @@ SCRIPTEND</script>
     </article>
 
 
-    <!-- SLIDE: OPERATORS & ADDING STRINGS VS NUMBERS -->
-    <article class='slide slide-list'>
-      <h2><span style="font-size: 0.8em;">Operators: </span>Numbers vs. Strings</h2>
-      <p>Remember that there are different variable types?  Arithmetic operators can only be performed on numerical values.</p>
-      <p>But numbers can be disguised as strings too!</p>
-      <p>When the addition (<code>+</code>) operator is used with string values, it doesn't "add" the values, it <span class="keyword">concatenates</span> them.</p>
-      <p>Try it out yourself!</p>
-<textarea class='coder-editor'>SCRIPT
-
-  var num1 = 20;
-  var num2 = 10;
-
-  document.write(num1 + num2);
-
-SCRIPTEND</textarea>
-<script type="coder-solution">SCRIPT
-
-  var num1 = "20";
-  var num2 = 10;
-
-  document.write(num1 + num2);
-
-SCRIPTEND</script>
-    </article>
+   
 
    
 
@@ -676,22 +616,7 @@ SCRIPTEND</textarea>
     </article>
 
 
- <!-- SLIDE: ALERT -->
-    <article class='slide slide-list'>
-      <h2>Alerting the User</h2>
-      <p>
-        If we just want to alert the user of something important, we can use the <code>alert()</code> functions
-      </p>
-      <p>
-        This function triggers a popup box that displays text to the user. 
-      </p>
-      <p> Try it out yourself!</p>
-<textarea class='coder-editor coder-editor-full'>SCRIPT
 
-alert("Welcome to Ladies Learning Code!");
-  
-SCRIPTEND</textarea>
-    </article>
 
 
     <!-- SLIDE: GETTING USER INPUT -->
@@ -746,6 +671,31 @@ SCRIPTEND</textarea>
   
 </script></textarea>
       <p class="solution-link">If you get stuck, <a href="exercises/solutions/simple-shipping-label.txt" target="_blank">click here</a> for the full solution.<br />Or if you want to reset, <a href="exercises/solutions/simple-shipping-label-org.txt" target="_blank">click here</a> for the original code.</p>
+    </article>
+
+ <!-- SLIDE:  WHITESPACE -->
+    <article class='slide slide-list'>
+      <h2>Whitespace in JavaScript</h2>
+      <p>
+        <span class="keyword">Whitespace</span> refers to blank characters and includes <strong>spaces</strong>, <strong>tabs</strong> and <strong>line breaks</strong>.
+      JavaScript ignores whitespace</p>
+<pre class="prettyprint">
+// both statements are the same to JavaScript
+var name=&quot;Brenna&quot;;
+var name = &quot;Brenna&quot;;
+</pre>
+<textarea class='coder-editor coder-editor-full'>SCRIPT
+
+  // Remember that browsers ignore extra whitespace in HTML!
+  document.write("Whitespace in a string.");
+  document.write("Whitespace     in    a    string.");
+  
+  //Whitespace in a string
+  alert("Whitespace in a string.");
+  alert("Whitespace     in    a    string.");
+  
+
+SCRIPTEND</textarea>
     </article>
 
 

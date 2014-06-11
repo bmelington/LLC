@@ -2,7 +2,7 @@
 
   var jellybeanPrice = 25;
   var gummybearPrice = 10;
-  var discountPercentage = 15;
+  var discountDollars = 5;
 
   /* 1. What is the cost of one jellybean and one gummybear? */
   var subTotal;
@@ -12,14 +12,12 @@
 
   /* Guess what? Ladies Learning Code students get a percentage discount!
      2. Figure out how much the discount will be. */
-  var discountAmount;
-  discountAmount = subTotal * discountPercentage / 100;
-  document.write("Discount Amount: " + discountAmount);
+  document.write("Discount Dollars: " + discountDollars);
   document.write("<br />");
   
   /* 3. Apply the discount to get the final price. */
   var finalTotal;
-  finalTotal = subTotal - discountAmount;
+  finalTotal = subTotal - discountDollars;
   document.write("Final Total: " + finalTotal);
 
 </script>
