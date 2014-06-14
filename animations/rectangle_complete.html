@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Animated Rectangle</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="paperjs/dist/paper.js"></script>
+	<script type="text/paperscript" canvas="canvas">
+		
+	var rectangle = new Path.Rectangle({
+		point: [75, 75],
+		size: [75, 75],
+		strokeColor: 'black',
+		fillColor: 'blue'
+	});
+
+	var destination = Point.random() * view.size;
+
+
+function onFrame(event) {
+	rectangle.rotate(3);
+
+	// Each frame, move the path a fraction (1/30) of the 
+	// difference in position
+	// between it and the destination.
+	
+	// The vector is the difference between the position of
+	// the rectangle and the destination point:
+	var vector = destination - rectangle.position;
+	
+	// We add our fraction of the vector to the position property
+	// of the rectangle, to move it in the direction of the
+	// destination point:
+	rectangle.position += vector / 30;
+	
+	
+	// If the distance between the path and the destination is less
+	// than 5, then the rectangle has reached it's destination, 
+	// and we need to give it a new random point 
+	// to move towards:
+
+	if (vector.length < 5) {
+		destination = Point.random() * view.size;
+	}
+}
+
+	</script>
+</head>
+
+
+<body>
+	<canvas id="canvas" resize stats hidpi="off"></canvas>
+</body>
+</html>

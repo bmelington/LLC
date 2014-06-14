@@ -20,3 +20,6 @@ var topping2 = "";
   
      document.write("Pizza order:<br />" + topping1 + ", " + topping2);
   }
+
+orderCheesePizza();
+orderPepperoniPizza();
