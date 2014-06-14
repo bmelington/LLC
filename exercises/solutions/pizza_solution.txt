@@ -1,0 +1,22 @@
+var topping1 = "";
+var topping2 = "";
+	
+
+  function orderCheesePizza() {
+    topping1 = "cheese";
+    topping2 = "sauce";
+
+    printOrder();
+  }
+  
+   function orderPepperoniPizza() {
+    topping1 = "pepperoni";
+    topping2 = "cheese";
+
+    printOrder();
+  }
+  
+  function printOrder() {
+  
+     document.write("Pizza order:<br />" + topping1 + ", " + topping2);
+  }

@@ -51,7 +51,7 @@
 
     <!-- SLIDE: JS THEORY Part 3 -->
     <article class='slide slide-subhead'>
-      <h1>JavaScript Part 3</h1>
+      <h1>JavaScript </h1>
       <p>Making decisions with conditionals</p>
     </article>
 
@@ -223,14 +223,100 @@ if ( weather == rain ) {
       </article>
       
       
-          <!-- SLIDE:  -->
+         
+      
+   
+    <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>Exercise: Conditionals</h2>
+        <p>Ask the user for what type of pizza they like order</p>
+<textarea class="coder-editor coder-editor-full">SCRIPT
+
+var userOrder = prompt("What type of pizza would you like to order?" +
+ "Cheese or Pepperoni", "Cheese");
+
+// If they choose a Cheese pizza
+if ( userOrder == "Cheese" ) {  
+  //alert them of their order
+} 
+
+//compete the code if they choose a Pepperoni pizza
+if (  ) {  
+  
+}
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+var userOrder = prompt("What type of pizza would you like to order?" +
+ "Cheese or Pepperoni", "Cheese");
+
+// If they choose a Cheese pizza
+if ( userOrder == "Cheese" ) {  
+  alert("You chose Cheese!");
+} 
+
+// If they choose a Pepperoni pizza
+if ( userOrder == "Pepperoni" ) {  
+  alert("You chose Pepperoni!");
+}
+
+SCRIPTEND</script>
+      </article>        
+
+
+     <!-- SLIDE:  -->
+      <article class='slide slide-list'>
+        <h2>What About Ham & Pineapple?</h2>
+        
+        <p>What if the user enters 'Ham & Pineapple?"</p>
+        <textarea class="coder-editor coder-editor-full">SCRIPT
+
+var userOrder = prompt("What type of pizza would you like to order?" +
+ "Cheese or Pepperoni", "Cheese");
+
+// If they choose a Cheese pizza
+if ( userOrder == "Cheese" ) {  
+  alert("You chose Cheese!");
+} 
+else if ( userOrder == "Pepperoni" ) {  
+  alert("You chose Pepperoni!");
+}
+else {
+	//enter an alert here
+}
+
+SCRIPTEND</textarea>
+<script type="coder-solution">SCRIPT
+
+
+var userOrder = prompt("What type of pizza would you like to order?" +
+ "Cheese or Pepperoni", "Cheese");
+
+// If they choose a Cheese pizza
+if ( userOrder == "Cheese" ) {  
+  alert("You chose Cheese!");
+} 
+else if ( userOrder == "Pepperoni" ) {  
+  alert("You chose Pepperoni!");
+}
+else {
+	alert("You can ONLY choose Cheese or Pepperoni");
+}
+
+
+SCRIPTEND</script>
+      </article>
+
+    
+     <!-- SLIDE:  -->
       <article class='slide slide-list'>
         <h2>Conditionals used for UI elements</h2>
-        <p>A basic conditional that your browser does internally is to react to mouse clicks on a HTML element.</p>
+        <p>A conditional that your browser does internally is to react to mouse clicks on webspage</p>
         <p><img src="assets/thenewdesignguidelines-pull.gif" width="121" height="221" alt="" align="left" style="margin-right: 30px;"/></p>
         
-        <p><br>
-<code>&lt;button onclick=&quot;animate()&quot;&gt;Pull&lt;/button&gt;</code></p>
+        <br>
+
         <p>IF a user has clicked on a button<br>
     &nbsp;&nbsp;&nbsp;&nbsp;THEN call the animate() function.</p>
         <br  clear="all" />
@@ -261,479 +347,6 @@ if ( weather == rain ) {
         <p class="sidenote centered"><a href="http://chrome.angrybirds.com/" target="_blank">http://chrome.angrybirds.com/</a></p>
       </article>
       
-      
-      <!-- SLIDE:  -->
-<article class='slide slide-list'>
-        <h2>Conditional Statements Summary</h2>
-        <div><br><br>
-          <table width="100%" style="font-size: 24px;">
-              <tr>
-                <th width="33%" align="left">If Statement </th>
-                <th width="33%" align="left">If...else statement </th>
-                <th width="33%" align="left">If...else if...else statement</th>
-              </tr>
-              <tr>
-              <td colspan="3"><br>
-</td>
-              </tr>
-              <tr>
-                <td>
-<pre class="prettyprint"  style="font-size: 18px; border: none;">
-if (condition) {<br>
- // do something<br>
-}
-</pre>
-                </td>
-                <td>
-<pre class="prettyprint"  style="font-size: 18px; border: none;">
-if (condition) {<br>
-  // do something<br>
-} else {<br>
-  // otherwise do this<br>
-}
-</pre>
-                </td>
-                <td>
-<pre class="prettyprint" style="font-size: 18px; border: none;">
-if (condition) {<br>
-  // do something<br>
-} else if (condition2) {<br>
-  // do something else<br>
-} else {<br>
-  // otherwise do this<br>
-}
-</pre>
-                </td>
-              </tr>
-          </table>
-        </div>
-        <br>
-        <p>&nbsp;</p>
-      </article>
-    
-    <!-- SLIDE:  -->
-      <article class='slide slide-list'>
-        <h2>Testing Conditions</h2>
-        <p>What does a condition actually look like?</p>
-        <p><code> if ( condition ) { ... } </code></p>
-        <p>Let's try also comparing Booleans using variables, Numbers, and Strings.</p>
-<textarea class="coder-editor coder-editor-full">SCRIPT
-
-// PURE BOOLEANS
-if ( true ) {  
-  document.write( "#1 this works. <br />" );
-} 
-
-if ( false ) {  
-  document.write( "#2 will not work. <br />" );
-}
-
-SCRIPTEND</textarea>
-<script type="coder-solution">SCRIPT
-
-// PURE BOOLEANS
-if ( true ) {  
-  document.write( "#1 this works. <br />" );
-}
-
-if ( false ) {  
-  document.write( "#2 will not work. <br />" );
-}
-
-// COMPARING VARIABLES AS BOOLEANS
-var isSunday = false;
-var isSaturday = true;
-
-if ( isSunday == true ) {
-  document.write( "#3 Yeah, laundry day! <br />" );
-}
-
-if ( isSaturday == true ) {
-  document.write( "#4 Yay, one more day til the weekend is over! <br />" );
-}
-
-// COMPARING NUMBERS
-if ( 1 &lt; 2 ) {
-  document.write( "#5 works. <br />" );
-}
-
-if ( 2 &gt; 1 ) {
-  document.write( "#6 works. <br />" );
-}
-
-// COMPARING STRINGS
-var emptyString = "";
-var filledString = "Woot! Conditionals!";
-
-if ( emptyString == "" ) {
-  document.write( "#7 Yep, the string was empty. <br />" );
-}
-
-if ( filledString == "" ) {
-  document.write( "#8 won't work. <br />" );
-}
-
-if ( filledString == "Woot! Conditionals!" ) {
-  document.write( "#9 Code strong. <br />" );
-}
-
-SCRIPTEND</script>
-      </article>        
-
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h3>
-        Cheat Sheet:  Comparison and Logical Operators
-      </h3>
-    <p class="reminders">
-      Here's a <strong>cheat sheet</strong> of different operators that can be used in conditional statements. </p>
-      <p class="sidenote">Using these two variables, <code>var two = 2</code> and <code>var ten = 10</code>  , the examples below show how the statements would return true using the various operators.
-      </p>
-      <table class="comparison-table" style="float:left; margin-right:20px;">
-        <tr>
-          <th colspan="3" align="left">Comparison operators</th>
-        </tr>
-        <tr>
-          <td width="15%">==</td>
-          <td width="50%">is equal to</td>
-          <td width="35%">ten == two * 5</td>
-        </tr>
-        <tr>
-          <td width="15%">===</td>
-          <td width="50%">
-            is exactly equal to
-            <br />
-            (value and type)
-          </td>
-          <td width="35%">
-            ten === 10
-            <br />
-            ten === "10" (false)
-          </td>
-        </tr>
-        <tr>
-          <td width="15%">!=</td>
-          <td width="50%">is not equal to</td>
-          <td width="35%">ten !== two</td>
-        </tr>
-        <tr>
-          <td width="15%">&gt;</td>
-          <td width="50%">greater than</td>
-          <td width="35%">ten &gt; two</td>
-        </tr>
-        <tr>
-          <td width="15%">&lt;</td>
-          <td width="50%">less than</td>
-          <td width="35%">
-            two
-                &lt; ten
-          </td>
-        </tr>
-        <tr>
-          <td width="15%">&gt;=</td>
-          <td width="50%">greater than or equal to</td>
-          <td width="35%">
-            ten &gt;= two * 5
-            <br />
-            ten &gt;= two * 5 + 1
-          </td>
-        </tr>
-        <tr>
-          <td width="15%">&lt;=</td>
-          <td width="50%">less than for equal to</td>
-          <td width="35%">
-            two
-                        &lt;= ten
-            <br />
-            two
-                        &lt;= 2
-          </td>
-        </tr>
-      </table>
-      <table class="comparison-table" style="float:left;">
-        <tr>
-          <th colspan="3" align="left">Logical operators</th>
-        </tr>
-        <tr>
-          <td width="15%">&amp;&amp;</td>
-          <td width="20%">and</td>
-          <td width="65%">
-            (ten
-            &lt; 11 &amp;&amp; ten &gt; 9)
-          </td>
-        </tr>
-        <tr>
-          <td width="15%">||</td>
-          <td width="20%">or</td>
-          <td width="65%">(ten == 10 || two == 2)</td>
-        </tr>
-        <tr>
-          <td width="15%">!</td>
-          <td width="20%">not</td>
-          <td width="65%">!(ten == two)</td>
-        </tr>
-      </table>
-        <br  clear="all" />
-    </article>
-
-
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h3>More Conditional  Examples</h3>
-      <p>
-        Let's look at some examples.  What do you think the output will be? Uncomment the code to be executed for each condition to see if the result is what you expected. Try changing the variable values too!
-      </p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-var regularPrice = 200;
-var salePrice = 19.99;
-
-if ( salePrice < regularPrice ) {
-  //document.write("#1 You've got to buy that robot! <br />");
-} 
-
-
-if ( salePrice > regularPrice ) {
-  //document.write("#2 Don't buy that robot <br />");
-} else {
-  //document.write("#2 Buy two in different colours! <br />");
-}
-
-if ( salePrice > regularPrice ) {
-  //document.write("#3 Don't buy that robot");
-} else if ( salePrice == regularPrice) {
-  //document.write("#3 Only buy it if you reeeaallly want it! <br />");
-} else {
-  //document.write("#3 Buy two in different colours! <br />");
-}
-</script>
-      </textarea>
-    </article>
-    
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2>Variables, Operators, Concatenation and Conditionals</h2>
-      <p>Now that we know what <span class="keyword">variables</span>, <span class="keyword">operators</span> and <span class="keyword">conditionals</span> are, let's put them all into action using dynamic content. </p>
-<textarea class='coder-editor coder-editor-full'>
-<script>
-
-  var yourBudget = 100; // all you've got is $100
-  var robotPrice = 20;  // a default price of $20 for now
-
-  /* Instead of a fixed value, get a dynamic price via a prompt popup: */
-  //var robotPrice = prompt("How much is that robot?");
-
-  if ( robotPrice <= yourBudget ) {
-    document.write("$" + robotPrice + " fits into my budget. Buy it!");
-  } else {
-    document.write("$" + robotPrice + "? Good Lawd! I can't afford that!");
-  }
-
-</script></textarea>
-<script type="coder-solution">SCRIPT
-
-  var yourBudget = 100; // all you've got is $100
-  //var robotPrice = 20;  // a default price of $20 for now
-
-  /* Instead of a fixed value, get a dynamic price via a prompt popup: */
-  var robotPrice = prompt("How much is that robot?");
-
-  if ( robotPrice <= yourBudget ) {
-    document.write("$" + robotPrice + " fits into my budget. Buy it!");
-  } else {
-    document.write("$" + robotPrice + "? Good Lawd! I can't afford that!");
-  }
-
-SCRIPTEND</script>
-    </article>
-
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (10 minutes)</div>
-        Quantity Check</h2>
-      <p>Uh-oh! Someone can attempt to put a negative number of products in their shopping cart! (This is based on the previous Quantity mini-exercise so it should look very familiar!)
-      </p>
-      <div class="hint">
-        <p>1. Use a conditional test to avoid a negative quantity. Typically this involves comparing against the number 0 and you can go about it in a few ways with the same result.<br />
-        2. Similarly, warn the user that they are attempting to check out with an empty basket.<br />
-        3. Bonus: Practice your concatention and display the price using a dollar sign.
-      </div>
-
-<textarea class='coder-editor coder-editor-full' data-save='exercise-quantity-check'>
-<script>
-
-  var quantity = 0;   
-
-  function addItem(){ 
-    quantity = quantity + 1;
-    refreshTotal();
-  }
-  
-  function removeItem(){
-    /* 1. Use a conditional if or if/else statement on the "quantity" variable 
-          to avoid having negative products. */
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    quantity = quantity - 1; 
-
-    /* *** YOUR CODE ^ABOVE^ HERE **** */
-    refreshTotal();
-  }  
-
-  function checkout() {
-    /* 2. Use a conditional if/else statement on the "quantity" variable 
-          to determine if the shopping cart is (or is not) empty, then
-          show the correct popup message. */
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    alert( "Sorry, you don't have anything in your cart!" );
-    alert( "Thank you for your order!" );
-    
-    /* *** YOUR CODE ^ABOVE^ HERE **** */
-  } 
-  
-  function refreshTotal() {       
-
-    // calculate the totalCost with a fixed price of $20.  
-    var totalCost = quantity * 20;
-
-    // then update the quantity text field
-    document.getElementById('updateQuantity').value = quantity;
-
-    // update the total cost text field
-    // 3. A nice to have: Put a dollar sign in front of the total cost
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    document.getElementById('updateTotal').value = totalCost;
-
-    /* *** YOUR CODE ^ABOVE^ HERE **** */
-  }
-</script>
-
-<div id="exercise2" style="text-align: center;">
-  <img src="http://brennaobrien.com/LLC-JavaScript/exercises/assets/plush-android.jpg" width="195" height="195" />
-  <br />
-  <button onclick="addItem();">Add</button>
-  <button onclick="removeItem();">Remove</button>
-  <br />
-  Quantity
-  <input type="text" id="updateQuantity" value="0" readonly style="text-align:center; width: 20px; border: 1px solid #ccc;"/>
-  <br />
-  <br />
-  Total Cost:
-  <input type="text" id="updateTotal" value="" readonly style="border: 1px solid #ccc;"/>
-  <br />
-  <br />
-  <button onclick="checkout();">Check out now!</button>
-</div>
-</textarea>
-
-      <p class="solution-link">If you get stuck, <a href="exercises/solutions/quantity-check.txt" target="_blank">click here</a> for  the full solution.<br />Or if you want to reset, <a href="exercises/solutions/quantity-check-org.txt" target="_blank">click here</a> for the original code.</p>
-
-    </article>
-
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (5-10 minutes)</div>
-        Form validation
-      </h2>
-      <p>
-        Let's revisit the shipping information form again -- however you don't want someone to be able to submit their order if they haven't filled out their address!
-      </p>
-      <p>
-        You have been supplied with 1 variable (<code>address</code>). After you press the &quot;Check out now!&quot; button, <code>address</code> which will <em>automagically</em> update to what is typed into the text field.
-      </p>
-      <div class="hint">
-        <p>1. Use a conditional test so someone cannot supply a blank address.<br />Hint: If you don't type anything into the address field, you get an <span class="keyword">empty string</span>. Remember that an empty string is simply two quotes with nothing inbetween them. e.g. <code>var emptyString = <strong>""</strong>;</code>)
-      </p>
-    </div>
-      
-<textarea class='coder-editor coder-editor-full' data-save='exercise-form-validation'>
-<script>
-  function validateForm() {
-
-    // automagically get the typed values from the form
-    var address = document.getElementById("address").value;
-
-    /* 1. Use a conditional if/else statement on the "address" variable 
-       to determine if the address field is (or is not) blank, 
-       then show the proper error or confirmation alert message. */
-
-    /* *** YOUR CODE _BELOW_ HERE **** */
-
-    alert( "Sorry there are errors. Form fields cannot be blank!" );
-    alert( "Thank you for your order!" );
-
-    /* *** YOUR CODE ^ABOVE^ HERE **** */
-  }
-</script>
-
-Address:
-<input type="text" id="address" />
-<br />
-<br />
-<button onclick="validateForm()">Check out now!</button>
-</textarea>
-
-      <p class="solution-link">If you get stuck, <a href="exercises/solutions/form-validation.txt" target="_blank">click here</a> for  the full solution.<br />Or if you want to reset, <a href="exercises/solutions/form-validation-org.txt" target="_blank">click here</a> for the original code.</p>
-
-    </article>
-
-    <!-- SLIDE:  -->
-    <article class='slide slide-list'>
-      <h2><div class="smaller">Mini-exercise (15-20 minutes)</div>
-        Complex form validation</h2>
-      <p>
-        Now here's a more complex shopping form that you require all fields to be filled in. You have been supplied with 3 additional variables which will automagically update: <code>name</code>, <code>city</code>, and <code>postal</code>.
-      </p>
-      
-      <div class="hint">
-        <p>1. Use a conditional to verify that ALL the fields have been filled in. (Hint: How do you test for something AND something else OR another thing at one time? Try looking at the cheatsheet on <a href="#slide-12" target="_blank">Slide #12</a> of this section.)
-      </div>
-
-<textarea class='coder-editor coder-editor-full' data-save='exercise-complex-form-validation'>
-<script>
-function validateForm() {
-
-  // automagically get the typed values from the form
-  var name = document.getElementById("name").value;
-  var address = document.getElementById("address").value;
-  var city = document.getElementById("city").value;
-  var postal = document.getElementById("postal").value;
-
-  /* *** YOUR CODE _BELOW_ HERE **** */
-  
-  /* 1. Use a conditional if/else statement to test for 
-  blank fields and alert the proper message. 
-  Below are some alerts you can use. */
-
-  alert( "Sorry there are errors. Form fields cannot be blank!" );
-  alert( "Thank you for your order!" );
-  
-
-  /* *** YOUR CODE ^ABOVE^ HERE **** */
-}
-</script>
-
-Name:
-<input type="text" id="name" />
-<br />
-Address:
-<input type="text" id="address" />
-<br />
-City:
-<input type="text" id="city" />
-<br />
-Postal Code:
-<input type="text" id="postal" />
-<br />
-<br />
-<button onclick="validateForm()">Check out now!</button>
-</textarea>
-
-    <p class="solution-link">If you get stuck, <a href="exercises/solutions/complex-form-validation.txt" target="_blank">click here</a> for the full solution.<br />Or if you want to reset, <a href="exercises/solutions/complex-form-validation-org.txt" target="_blank">click here</a> for the original code.</p>
-
-    </article>
 
     <!-- SLIDE: Next section -->
     <article class='slide slide-list'>
